@@ -50,6 +50,36 @@ class HomePage extends StatelessWidget {
                 color: Colors.green, borderRadius: BorderRadius.circular(10)),
           ),
           Container(
+            width: 200,
+            height: 150,
+            decoration: BoxDecoration(
+                color: Colors.green, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 200,
+            height: 150,
+            decoration: BoxDecoration(
+                color: Colors.green, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 200,
+            height: 150,
+            decoration: BoxDecoration(
+                color: Colors.green, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 200,
+            height: 150,
+            decoration: BoxDecoration(
+                color: Colors.green, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 200,
+            height: 150,
+            decoration: BoxDecoration(
+                color: Colors.green, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
             width: 150,
             height: 150,
             decoration: BoxDecoration(
@@ -76,6 +106,36 @@ class HomePage extends StatelessWidget {
           ),
           Container(
             width: 200,
+            height: 90,
+            decoration: BoxDecoration(
+                color: Colors.red, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 150,
+            height: 90,
+            decoration: BoxDecoration(
+                color: Colors.red, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 150,
+            height: 90,
+            decoration: BoxDecoration(
+                color: Colors.red, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 150,
+            height: 90,
+            decoration: BoxDecoration(
+                color: Colors.red, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 150,
+            height: 90,
+            decoration: BoxDecoration(
+                color: Colors.red, borderRadius: BorderRadius.circular(10)),
+          ),
+          Container(
+            width: 150,
             height: 90,
             decoration: BoxDecoration(
                 color: Colors.red, borderRadius: BorderRadius.circular(10)),
