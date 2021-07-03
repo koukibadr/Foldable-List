@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foldable_list/foldable_list.dart';
+import 'package:foldable_list/resources/arrays.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +25,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: FoldableList(foldableItems: [
+        child: FoldableList(
+          animationType: ANIMATION_TYPE.SCALE,
+          foldableItems: [
           Container(
             width: 200,
             height: 150,
