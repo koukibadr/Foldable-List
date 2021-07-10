@@ -2,16 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:foldable_list/resources/arrays.dart';
 
 class FoldableList extends StatefulWidget {
-  final List<Widget> foldableItems;
-  final List<Widget> items;
-  final Duration animationDuration;
-  final ANIMATION_TYPE animationType;
-
   FoldableList(
       {required this.foldableItems,
       required this.items,
       this.animationDuration = const Duration(milliseconds: 500),
       this.animationType = ANIMATION_TYPE.NONE});
+
+  ///List of expanded items, when the user click on item
+  ///an item with the same index will be shown from this list
+  ///
+  final List<Widget> foldableItems;
+
+  ///List of foldable widgets, default displayed list
+  ///
+  final List<Widget> items;
+
+  ///The duration of the animation applied on the items
+  ///
+  final Duration animationDuration;
+
+  ///The type of animation, values can be:
+  ///```dart
+  ///{
+  ///NONE,
+  ///SIZE_TRANSITION,
+  ///SCALE
+  ///}
+  ///```
+  ///by default it's set to [ANIMATION_TYPE.NONE
+  ///]
+  final ANIMATION_TYPE animationType;
 
   @override
   _FoldableListState createState() => _FoldableListState();
@@ -19,10 +39,16 @@ class FoldableList extends StatefulWidget {
 
 class _FoldableListState extends State<FoldableList>
     with SingleTickerProviderStateMixin {
+  ///The actual displayed list of widget in the list view
+  ///
   List<Widget> displayedList = [];
-  int currentSelectedItem = 0;
 
+  ///The animation controller
+  ///
   late AnimationController expandController;
+
+  ///the animation value
+  ///
   late Animation<double> animation;
 
   @override
@@ -32,6 +58,8 @@ class _FoldableListState extends State<FoldableList>
     displayedList.addAll(this.widget.items);
   }
 
+  ///initialize the animation attributes
+  ///
   _initializeAnimation() {
     expandController = AnimationController(
         vsync: this, duration: this.widget.animationDuration);
@@ -59,6 +87,9 @@ class _FoldableListState extends State<FoldableList>
     );
   }
 
+  ///invoked when an item on the list is clicked,
+  ///update the item in [position] with an item from [widget.foldableItems]
+  ///
   _updateSelectedItem(position) {
     displayedList.clear();
     expandController.reset();
@@ -70,6 +101,9 @@ class _FoldableListState extends State<FoldableList>
     });
   }
 
+  ///render the new selected item with the selected animation type
+  ///[widget] the selected item that will be shown as foldable
+  ///
   _renderFoldableItem(Widget widget) {
     switch (this.widget.animationType) {
       case ANIMATION_TYPE.SCALE:
