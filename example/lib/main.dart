@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       body: Container(
         child: FoldableList(
-          animationType: ANIMATION_TYPE.SIZE_TRANSITION,
+          animationType: ANIMATION_TYPE.NONE,
           foldableItems: this.expandedWidgetList, 
           items: this.simpleWidgetList
         ),

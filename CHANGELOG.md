@@ -1,3 +1,4 @@
-## [0.0.1] - TODO: Add release date.
+## [1.0.0] - 07/11/2021
 
-* TODO: Describe initial release.
+* Support two different widgets one will be used as an expanded items
+* Animated transition between items 
