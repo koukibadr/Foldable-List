@@ -1,6 +1,6 @@
 name: foldable_list
 description: An animated foldable list with expanded items that will be shown when user click on a cell
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/koukibadr/Foldable-List
 
 environment:
