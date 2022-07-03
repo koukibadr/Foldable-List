@@ -19,7 +19,7 @@ An animated foldable list cells with dynamic widget list input, let you display 
 In order to use foldable list package you need to install it via `pubspec.yaml` file
 ```yaml
 dependencies:
-	foldable_list: ^1.0.0
+	foldable_list: ^1.0.1
 ```
 
 ##  Parameters
