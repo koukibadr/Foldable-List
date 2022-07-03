@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -32,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   late List<Widget> expandedWidgetList;
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     initList();
   }
@@ -43,15 +42,14 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       body: Container(
         child: FoldableList(
-          animationType: ANIMATION_TYPE.NONE,
-          foldableItems: this.expandedWidgetList, 
-          items: this.simpleWidgetList
-        ),
+            animationType: AnimationType.none,
+            foldableItems: this.expandedWidgetList,
+            items: this.simpleWidgetList),
       ),
     );
   }
 
-  initList(){
+  initList() {
     this.simpleWidgetList = [];
     this.expandedWidgetList = [];
     for (var i = 0; i < 9; i++) {
@@ -60,13 +58,11 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  Widget renderSimpleWidget(){
+  Widget renderSimpleWidget() {
     return Container(
       height: 50,
       decoration: BoxDecoration(
-        color: Colors.grey[200],
-        borderRadius: BorderRadius.circular(10)
-      ),
+          color: Colors.grey[200], borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -79,9 +75,7 @@ class _HomePageState extends State<HomePage> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("John Doe",style: TextStyle(
-                  fontWeight: FontWeight.bold
-                )),
+                Text("John Doe", style: TextStyle(fontWeight: FontWeight.bold)),
                 Text("Web developer and engineer"),
               ],
             )
@@ -91,13 +85,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget renderExpandedWidget(){
+  Widget renderExpandedWidget() {
     return Container(
       height: 140,
       decoration: BoxDecoration(
-        color: Colors.grey[200],
-        borderRadius: BorderRadius.circular(10)
-      ),
+          color: Colors.grey[200], borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -111,15 +103,14 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("John Doe",style: TextStyle(
-                  fontWeight: FontWeight.bold
-                )),
+                Text("John Doe", style: TextStyle(fontWeight: FontWeight.bold)),
                 Text("Web developer and engineer"),
                 Text("Birthday : 22/10/1996"),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    ElevatedButton(onPressed: (){}, child: Text("View Linkedin Profile"))
+                    ElevatedButton(
+                        onPressed: () {}, child: Text("View Linkedin Profile"))
                   ],
                 )
               ],

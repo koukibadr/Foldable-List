@@ -1,5 +1,1 @@
-enum ANIMATION_TYPE {
-  NONE,
-  SIZE_TRANSITION,
-  SCALE
-}
+enum AnimationType { none, sizeTransition, scale }

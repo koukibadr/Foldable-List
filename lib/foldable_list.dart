@@ -6,7 +6,7 @@ class FoldableList extends StatefulWidget {
       {required this.foldableItems,
       required this.items,
       this.animationDuration = const Duration(milliseconds: 500),
-      this.animationType = ANIMATION_TYPE.NONE});
+      this.animationType = AnimationType.none});
 
   ///List of expanded items, when the user click on item
   ///an item with the same index will be shown from this list
@@ -31,7 +31,7 @@ class FoldableList extends StatefulWidget {
   ///```
   ///by default it's set to [ANIMATION_TYPE.NONE
   ///]
-  final ANIMATION_TYPE animationType;
+  final AnimationType animationType;
 
   @override
   _FoldableListState createState() => _FoldableListState();
@@ -106,12 +106,12 @@ class _FoldableListState extends State<FoldableList>
   ///
   _renderFoldableItem(Widget widget) {
     switch (this.widget.animationType) {
-      case ANIMATION_TYPE.SCALE:
+      case AnimationType.scale:
         return ScaleTransition(
             scale: animation,
             child: Container(
                 width: MediaQuery.of(context).size.width, child: widget));
-      case ANIMATION_TYPE.SIZE_TRANSITION:
+      case AnimationType.sizeTransition:
         return SizeTransition(
             sizeFactor: animation,
             child: Container(
